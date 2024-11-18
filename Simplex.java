@@ -195,7 +195,6 @@ public class Simplex {
             // Paso 3: Identificar la columna pivote (con el valor más negativo en la fila z)
             int colPivote = -1;
             double minValue = 0;
-           
             // Buscar la columna pivote en la fila z
             for (int j = 0; j < n; j++) {
                 if (tabla[m - 1][j] < minValue) {
@@ -224,7 +223,6 @@ public class Simplex {
                 }
             }
             // Paso 5: Intercambiar la variable básica(el titulo)
-            // En este caso, la fila pivote se convierte en la nueva fila básica y la columna pivote como la nueva variable básica
             // Paso 6: Hacer el pivote
             double pivot = tabla[filaPivote][colPivote];
             System.out.println("haciendo 1 al pivote"+pivot+"imprimiendo la fila pivote");
@@ -294,10 +292,9 @@ public class Simplex {
         //tabla[i->restricciones+1(z)][j->incognitas]= tablaArgumento(ocurrencia de coeficientes)
         //if(simplex) m columnas + a la derecha y ↓
         //concatenar  nueva matriz diagonal unitaria(restricciones) y al final tambien los r
-        //2x1 + 1x2 + 1x3 ≤ 2
-        //1x1 + 2x2 + 3x3 ≤ 5
-        //2x1 + 2x2 + 1x3 ≤ 6
-        //Z -3x1 -x2 -3x3 + 0
+        //"1x1 + 4x4 >= 3.5",
+        // "1x1 + 2x2 >=2.5",
+        // "z -3x1 -8x2 + 0"
         double[][] matriz=new double[nRes+1][nIncog];
         double[][] terminoIn= new double[nRes+1][1];
         // Suponiendo que res[i] contiene la cadena de entrada (como la ecuación)
@@ -453,10 +450,10 @@ public class Simplex {
         //tabla[i->restricciones+1(z)][j->incognitas]= tablaArgumento(ocurrencia de coeficientes)
         //if(simplex) m columnas + a la derecha y ↓
         //concatenar  nueva matriz diagonal unitaria(restricciones) y al final tambien los r
-        //2x1 + 1x2 + 1x3 ≤ 2
-        //1x1 + 2x2 + 3x3 ≤ 5
-        //2x1 + 2x2 + 1x3 ≤ 6
-        //Z -3x1 -x2 -3x3 + 0
+        //"2x1 + 1x2 ≤ 20",
+        //"1x1 + 1x2 ≤ 18"
+        //,"1x1 + 2x2 ≥ 12",
+        //"z -5x1 -4x2 + 0"}
         double[][] matriz= new double[nRes+1][nIncog];
         double [][] basicas=new double[nRes+1][nRes];
         double [][] A=new double[nRes+1][nRes];
@@ -666,7 +663,7 @@ public class Simplex {
         String[] tarea3SimplexDual={"1x1 + 2x2 + 3x3 ≥ 5",
                                     "2x1 + 2x2 + 1x3 ≥ 6",
                                     "z -3x1  -4x2 -5x3 + 0"};
-        //simplexDual(tarea3SimplexDual, 2, 3);
+        simplexDual(tarea3SimplexDual, 2, 3);
         String [] tareaSimplexM={"2x1 + 1x2 ≤ 20",
                                 "1x1 + 1x2 ≤ 18"
                                 ,"1x1 + 2x2 ≥ 12",
