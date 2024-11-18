@@ -651,23 +651,28 @@ public class Simplex {
                                         "3x1 + 2x2 + 4x3 + 2x4 <=300", 
                                         "1x1 + 1x2 + 2x3 + 3x4 <=150" ,
                                     "z -50x1 -40x2 -70x3 -60x4 + 0"};
-        //simplex2(tarea2SimplexMuebles, 03, 04);
+        System.out.println("\nSimplex");
+        simplex(tarea2SimplexMuebles, 03, 04);
         String[] tarea1SimplexDual = {"1x1 + 4x4 >= 3.5",
                                         "1x1 + 2x2 >=2.5",
                                         "z -3x1 -8x2 + 0"};
+        //System.out.println("\nSimplexDual");
         //simplexDual(tarea1SimplexDual, 02, 2);
         String[] tarea2SimplexDual ={"2x1 + 1x2 + 1x3 ≥ 40",
                                     "1x1 + 1x2 + 1x3 ≥ 60", 
-                             "z -70x1 -40x2 -90x3 + 0"};
-        //simplexDual(tarea2SimplexDual, 02, 03);
+                                    "z -70x1 -40x2 -90x3 + 0"};
+        System.out.println("\nSimplexDual");
+        simplexDual(tarea2SimplexDual, 02, 03);
         String[] tarea3SimplexDual={"1x1 + 2x2 + 3x3 ≥ 5",
                                     "2x1 + 2x2 + 1x3 ≥ 6",
                                     "z -3x1  -4x2 -5x3 + 0"};
-        simplexDual(tarea3SimplexDual, 2, 3);
+        //System.out.println("\nSimplexDual");
+        //simplexDual(tarea3SimplexDual, 2, 3);
         String [] tareaSimplexM={"2x1 + 1x2 ≤ 20",
                                 "1x1 + 1x2 ≤ 18"
                                 ,"1x1 + 2x2 ≥ 12",
                                 "z -5x1 -4x2 + 0"};
+        System.out.println("\nSimplexM");
         simplexM(tareaSimplexM,2,1,2,3);
     }
 }
